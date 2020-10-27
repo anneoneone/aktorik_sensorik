@@ -29,12 +29,7 @@ load B;
 B_plot=sortrows(B,2)
 
 
-%B_plot=sortrows(B,1);
-%figure(2);
-%plot(B_plot(:,1),B_plot(:,2),'x');
-%title('Ankerwiderstand');
-%xlabel('U_a / V');
-%ylabel('I_a / A');
+
 
 %load C;
 %figure(3);
