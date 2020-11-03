@@ -12,6 +12,8 @@ close all
 
 
 
+figure(1)
+% subplot()
 
 
 % save current plot to img/-folder
