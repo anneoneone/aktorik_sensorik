@@ -36,10 +36,6 @@ xlabel('U_a in V');
 ylabel('I_a in A');
 grid on
 
-print('BarPlot','-dpng')
-
-%file = append(mfilename, '.png')
-%anton = fullfile('./src/', file)
-
-
-%saveas(hello, './src/img.png', 'png');
+% save current plot to img/-folder
+imagePath = fullfile('../img/', mfilename);
+print(imagePath,'-dpng');

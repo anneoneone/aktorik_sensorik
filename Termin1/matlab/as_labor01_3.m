@@ -40,3 +40,7 @@ subtitle(['k_e=' num2str(k_e)])
 xlabel('U_a in V');
 ylabel('INC per T');
 grid on
+
+% save current plot to img/-folder
+imagePath = fullfile('../img/', mfilename);
+print(imagePath,'-dpng');

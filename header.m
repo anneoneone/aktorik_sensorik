@@ -11,3 +11,9 @@ home
 close all
 
 
+
+
+
+% save current plot to img/-folder
+imagePath = fullfile('../img/', mfilename);
+print(imagePath,'-dpng');

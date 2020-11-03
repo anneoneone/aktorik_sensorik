@@ -26,6 +26,7 @@ A=f4(1,1)
 x1 = linspace(-10, 10);
 y1 = polyval(f4, x1);
 
+figure(1);
 plot(D_plot(:,1), D_plot(:,2),'x', x1, y1, 'r','linewidth',2 );
 axis([-10 10 -15 15])
 title('Verstärkung')
@@ -33,3 +34,7 @@ subtitle(['A=' num2str(A)])
 xlabel('U_e in V');
 ylabel('U_a in V');
 grid on
+
+% save current plot to img/-folder
+imagePath = fullfile('../img/', mfilename);
+print(imagePath,'-dpng');

@@ -41,6 +41,7 @@ y2 = polyval(f2, x1);
 
 
 figure(1);
+subplot(2,1,1);
 plot(B_plot(:,2), B_plot(:,3),'x', x1, y1, 'r','linewidth',2 );
 axis([0 2.5 0 2.5])
 title('Kraft')
@@ -48,7 +49,7 @@ xlabel('I_a in A');
 ylabel('F in N');
 grid on
 
-figure(2)
+subplot(2,1,2);
 plot(B_plot(:,2), B_plot(:,3)*r ,'x', x1, y2, 'r','linewidth',2 );
 axis([0 2.5 0 0.025])
 title('Drehmoment')
@@ -56,3 +57,7 @@ subtitle(['k_m=' num2str(k_m)])
 xlabel('I_a in A');
 ylabel('M_m in Nm');
 grid on
+
+% save current plot to img/-folder
+imagePath = fullfile('../img/', mfilename);
+print(imagePath,'-dpng');
