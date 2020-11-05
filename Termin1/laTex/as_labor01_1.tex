@@ -3,21 +3,21 @@
 \subsection{Beschreibung}
 
 Im ersten Versuch soll die Momentenkonstante $k_m$ bestimmt werden.
-Sie hängt folgendermaßen mit dem Drehmoment $M_M$ und dem Motorstrom
+Sie hängt folgendermaßen mit dem Drehmoment $M_M$ und dem Motorstrom $i_a(t)$
 zusammen. 
 
-\begin{equation} \label{eq1}
+\begin{equation} \label{eq111}
     \begin{split}
         M_M(t)&=k_m \cdot i_a(t)\\
         k_m&=\frac{M_M(t)}{i_a(t)}
     \end{split}
 \end{equation}
 
-Als Messwerte ist eine Matrix mit den Motorströmen $I_a$ und der Auslenkungskraft
-$F$ gegeben. Um daraus das Drehmoment $M_M$ zu bestimmen wird der Radius $r$
-benötigt, welcher mit $1 \mathrm{cm}$ gegeben ist.
+Als Messwerte ist eine Matrix mit den Motorströmen $I_a$ und der Auslenkungskraft $F$
+gegeben. Um daraus das Drehmoment $M_M$ zu bestimmen wird der Radius $r$ benötigt,
+welcher mit $1 \mathrm{cm}$ gegeben ist.
 
-\begin{equation} \label{eq2}
+\begin{equation} \label{eq112}
     \begin{split}
         M_M=f(I_a)&=r \cdot F(I_a)
     \end{split}
@@ -28,7 +28,7 @@ Gerade bestimmt werden. Hierfür muss gewährleistet werden, dass der Arbeistpun
 linear ist. Deshalb dürfen die letzten drei Messwerte in der linearen Regression
 nicht betrachtet werden.
 
-\begin{equation} \label{eq3}
+\begin{equation} \label{eq113}
     \begin{split}
         k_m\simeq 0.022 \mathrm{\frac{Nm}{A}}
     \end{split}
