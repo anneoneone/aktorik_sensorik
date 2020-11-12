@@ -3,8 +3,6 @@
 %   Labormessungen
 %   Dipl.-Ing. (FH) Heiko Lenger
 %   2020-10-29
-clear
-close all
 
 
 % load('B');
@@ -43,7 +41,7 @@ close all
 %     ylabel('Output U / V');
 
 
-load('E');
+%load('E');
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % R=3.26;
@@ -127,7 +125,17 @@ load('E');
 %         xlabel('Strom I / A');
 %         ylabel('Kraft F / N');
 %         
-load('Leerlauf');
+
+clear
+home
+close all
+
+FolderName = "./src/";
+Leerlauf_Name = "Leerlauf.mat";
+Leerlauf = fullfile(FolderName, Leerlauf_Name);
+load(Leerlauf);
+
+
 figure(8);
     subplot(211);
         plot(Leerlauf(:,1), Leerlauf(:,3), 'x');
@@ -141,31 +149,32 @@ figure(8);
         xlabel('Spannung U / V');
         ylabel('Strom I / A');
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 2.4 Reibungskonstante cr
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Pz = 2000/(2*pi)       % Pulse Inkrementalgeber  in [inc/rad]
-lambda = 1000/Pz       % Umrechnungsfaktor       in [(ms rad)/(s inc)]
-I = Leerlauf(2:13,2);  % Strom I_a               in [A]
-INC = Leerlauf(2:13,1);% INC per T               in [INC/ms]
-w = lambda*INC;        % Winkelgeschwindigkeit   in [rad/s]
-km = 0.022032         % Momentenkonstante       in [Nm/A]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Pz = 2000/(2*pi);       % Pulse Inkrementalgeber  in [inc/rad]
+lambda = 1000/Pz;       % Umrechnungsfaktor       in [(ms rad)/(s inc)]
+I = Leerlauf(:,2);      % Strom I_a               in [A]
+INC = Leerlauf(:,3);    % INC per T               in [INC/ms]
+w = lambda*INC;         % Winkelgeschwindigkeit   in [rad/s]
+km = 0.022031575949394; % Momentenkonstante       in [Nm/A]
 
-% lineares Fitting
-f2 = polyfit(I, w, 1);
+% lineares Fitting im Arbeitsbereich
+f2 = polyfit(I(2:end), w(2:end), 1);
 % Strom Vektor
-x2 = linspace(0.04, 0.047)
+x2 = linspace(0, 0.05);
 % Winkelges. Vektor
-y2 = polyval(f2, x2)
+y2 = polyval(f2, x2);
 % Steigung m hat die Einheit [rad/(A s)]
-m = f2(1,1);
+m = f2(1);
 % Reibungskonstante cr in [(Nm s)/rad]
-cr = km/m
+cr = km*1/m
 
 figure(88);
     plot(I,w,'x', x2, y2, 'r', 'linewidth', 2);
     title('Winkelgeschwindigkeit - Strom');
     grid;
+    axis([0.038 0.048 0 550]);
     xlabel('Strom in I / A');
     ylabel('w in rad/s');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
