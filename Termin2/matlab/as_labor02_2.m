@@ -33,20 +33,7 @@ m = f2(1);
 % Reibungskonstante cr in [(Nm s)/rad]
 cr = km*1/m
 
-% figure(1);
-%     subplot(211);
-%         plot(Leerlauf(:,1), Leerlauf(:,3), 'x');
-%         title('Leerlauf');
-%         grid;
-%         xlabel('Spannung U / V');
-%         ylabel('INC per T');
-%     subplot(212);
-%         plot(Leerlauf(:,1), Leerlauf(:,2), 'x');
-%         grid;
-%         xlabel('Spannung U / V');
-%         ylabel('Strom I / A');
-
-figure(2);
+figure(1);
     plot(I,w,'x', x2, y2, 'r', 'linewidth', 2);
     title('Reibungskonstante');
     subtitle(['c_r=' num2str(cr)])
