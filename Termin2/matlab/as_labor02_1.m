@@ -39,6 +39,7 @@ subplot(1,2,1)
     plot(f,y, 'o', freq,y1,'r','linewidth',2);
     grid on;
     title('Induktivität 1')
+    subtitle(['L=' num2str(L)])
     xlabel('Frequenz f in Hz')
     ylabel('Faktor tan(2 pi f d_t)')
 subplot(1,2,2)
