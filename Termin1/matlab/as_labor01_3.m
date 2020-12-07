@@ -26,7 +26,7 @@ lambda= 1000/Pz
 % lineares fitting im Arbeitsbereich
 f3 = polyfit(C_plot(:,2), C_plot(:,1), 1);
 % die Steigung hat die Einheit [Ink/V ms]
-% ke hat die Einheit [Vs/rad]
+% ke hat die Einheit [Vs/rad]g
 k_e=1/(lambda*f3(1,1));
 % Erzeugung der Ausgleichsgerade
 x1 = linspace(0, 12);
