@@ -23,32 +23,35 @@ $R_{Shunt}$ gemessen werden.\\
 Soll der Motor in die entgegengesetzte Richtung betrieben werden, müssen
 die MOSFETS $T_{RH}$ und $T_{LL}$ angesteuert werden.\\
 
-Dadurch gibt es insgesamt 4 Zustände. Links-Rechts Transistoren an oder
-ausgeschaltet und Rechts-Links Transistoren an oder ausgeschaltet.\\
+Dadurch gibt es insgesamt 4 Zustände. Links-Rechts-Lauf Transistoren an oder
+ausgeschaltet und Rechts-Links-Lauf Transistoren an oder ausgeschaltet.\\
 
 Um die H-Brücke zu betreiben wird eine Steuerung benötigt. Die Steuerung
-benötigt als Eingänge den Sollstrom $I_{soll}$ und den momentanen Strom
-$I_{ist}$. Als Ausgänge 
+benötigt als Eingänge den Sollstrom $I_{soll}$, den momentanen Strom
+$I_{ist}$ und die Eingangspannung. Als Ausgänge besitzt die Steuerung die
+gepulste Motorspannung.\\
 
+Die 4 Maschengleichung der 4 Zustände lauten wie folgt, wenn der
+Drain-Source Widerstand vernachlässigt wird.\\
 
+Link-Rechts-Lauf:
 
+\begin{equation} \label{eq411}
+    \begin{split}
+        0 &= U_H - R \cdot i_M - L \cdot \dot{i_M} - k_e \cdot \omega - R_{Shunt} \cdot i_M\\
+        0 &= U_H + 2 U_D + R \cdot i_M + L \cdot \dot{i_M} + k_e \cdot \omega + R_{Shunt} \cdot i_M
+    \end{split}
+\end{equation}
 
-% 2.2 
-% Durch die Drehung des Motors wird eine Spannung Induziert. Dadurch fließt ein Strom durch die 
-% sogenannten Parasit"ardioden T_RH und T_LL. 
+Rechts-Links-Lauf:
 
-% 2.3
-% Der Strom l"asst sich "uber R_shunt messen, welcher passenderweise mit 1 OHM gew"ahlt ist. So ist
-% die Spannung, die an R_shunt abf"allt gleich des Stromes.
+\begin{equation} \label{eq411}
+    \begin{split}
+        0 &= U_H + R \cdot i_M + L \cdot \dot{i_M} + k_e \cdot \omega - R_{Shunt} \cdot i_M\\
+        0 &= U_H + 2 U_D - R \cdot i_M - L \cdot \dot{i_M} - k_e \cdot \omega + R_{Shunt} \cdot i_M
+    \end{split}
+\end{equation}
 
-% 2.4
-% Es gibt vier verschiedene Zust"ande. Wenn der Motor im Uhrzeigersinn betrieben werden soll, k"onnen
-% die entsprechenden Transistoren geschaltet sein oder nicht geschaltet sein. Soll der Motor gegen
-% den Uhrzeigersinn betrieben werden, kann das andere Transistorenpaar geschaltet sein oder nicht.
-
-% 2.5
-% Eing"ange: I_IST, I_Soll, U_H-Br"ucke
-% Ausg"ange: U_Motor
 
 % 2.6
 % 1. Fall: AN
