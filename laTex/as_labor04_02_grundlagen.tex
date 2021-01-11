@@ -3,6 +3,13 @@
 Mit Hilfe einer sogenannten H-Brücke lassen sich die Wicklungen eines
 Motors auf eine einfache Art und Weise ansteuern.\\
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{schaltung_h_bruecke.png}
+    \caption{Schaltung H-Brücke}
+    \label{fig:Schaltung H-Bridge}
+\end{figure}
+
 Um den Strom positiv, also von links nach rechts, fließen zu lassen,
 müssen die MOSFETS $T_{LH}$ und $T_{RL}$ angesteuert werden.\\
 
@@ -17,7 +24,11 @@ Soll der Motor in die entgegengesetzte Richtung betrieben werden, müssen
 die MOSFETS $T_{RH}$ und $T_{LL}$ angesteuert werden.\\
 
 Dadurch gibt es insgesamt 4 Zustände. Links-Rechts Transistoren an oder
-ausgeschaltet und Rechts-Links Transistoren an oder ausgeschaltet.
+ausgeschaltet und Rechts-Links Transistoren an oder ausgeschaltet.\\
+
+Um die H-Brücke zu betreiben wird eine Steuerung benötigt. Die Steuerung
+benötigt als Eingänge den Sollstrom $I_{soll}$ und den momentanen Strom
+$I_{ist}$. Als Ausgänge 
 
 
 
