@@ -4,10 +4,10 @@ Für das Subsystem Steuerung mit H-Brücke wurden folgenden Ein- und Ausgänge
 definiert.\\
 
 \begin{itemize}
-    \item ($In_1$) Die Eingangs oder Betriebsspannung $U_H$
+    \item ($In_1$) Die Eingangs- oder Betriebsspannung $U_H$
     \item ($In_2$) Der Momentanstrom $I_{ist}$
     \item ($In_3$) Der angestrebte Strom $I_{soll}$
-    \item ($Out_1$) Die Spannung die über dem Motor abfällt $U_{Motor}$
+    \item ($Out_1$) Die Spannung, die über dem Motor abfällt $U_{Motor}$
 \end{itemize}
 
 
@@ -18,9 +18,9 @@ definiert.\\
     \label{fig:Subsystem H-Bridge}
 \end{figure}
 
-Das Subsystem beinhaltet Relay-Block der hier als Zweipunktregeler genutzt
-wird. Die Beiden Schwellwerte $i_{plus}=10\mathrm{mA}$ und $i_{minus}=-10
-\mathrm{mA}$ wurden im m-File definiert. Dieser gibt einen boolschen Wert
-an den 1. Switch Block der zwischen Transistoren An und Aus hin- und
+Das Subsystem beinhaltet den Relay-Block, der hier als Zweipunktregler genutzt
+wird. Die beiden Schwellwerte $i_{plus}=10\mathrm{mA}$ und $i_{minus}=-10
+\mathrm{mA}$ wurden im m-File definiert. Der Relay-Block gibt einen boolschen Wert
+an den 1. Switch-Block, welcher zwischen Transistoren An und Aus hin- und
 herschaltet. Der 2. Switch Block verändert die Drehrichtung des Motors und
-wird geschaltet vom Vorzeichen des einzustellenden Strom $I_{soll}$.
+wird vom Vorzeichen des einzustellenden Strom $I_{soll}$ geschaltet.
