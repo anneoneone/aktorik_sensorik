@@ -19,8 +19,41 @@ definiert.\\
 \end{figure}
 
 Das Subsystem beinhaltet Relay-Block der hier als Zweipunktregeler genutzt
-wird. Die Beiden Schwellwerte $i_{plus}=10\mathrm{mA}$ und $i_{minus}=-10
-\mathrm{mA}$ wurden im m-File definiert. Dieser gibt einen boolschen Wert
-an den 1. Switch Block der zwischen Transistoren An und Aus hin- und
-herschaltet. Der 2. Switch Block verändert die Drehrichtung des Motors und
-wird geschaltet vom Vorzeichen des einzustellenden Strom $I_{soll}$.
+wird. Die Beiden Schwellwerte der Hysterese $i_{plus}=10\mathrm{mA}$ und
+$i_{minus}=-10\mathrm{mA}$ wurden im m-File definiert. Dieser gibt einen
+boolschen Wert an den 1. Switch Block der zwischen Transistoren An und Aus
+hin- und herschaltet. Der 2. Switch Block verändert die Drehrichtung des
+Motors und wird geschaltet vom Vorzeichen des einzustellenden Strom $I_{soll}$.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{dcmotor_modell.png}
+    \caption{Subsystem DC-Motor}
+    \label{fig:Subsystem DC-Motor}
+\end{figure}
+
+Das Subsystem Gleichstrommotor wurde im Labor 3 aufgestellt. Es bekommt
+als Eingang eine Eingangspannung $U_M$ und gibt als Ausgang sowohl den
+Strom $i_M$ als auch die Winkelgeschwindigkeit $\omega$ zurück.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{hbridge_dcmotor_modell.png}
+    \caption{Gesamtsystem}
+    \label{fig:Gesamtsystem}
+\end{figure}
+
+Das Gesamtsystem besteht aus den beiden vorher beschriebenen Subsystemen die nun
+verbunden werden. Die Eingangspannung $U_H=15\mathrm{V}$ ist im m-file festgelegt.
+Im Subblock $I_{soll}$ ist der einzustellenden Strom definiert. Dieser beträgt
+am Anfang $0.5A$. Nach zwei Sekunden ändert er seinen Wert auf $-0.3A$ und nach
+4 Sekunden springt der Strom auf $0.6A$.
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{hbridge.png}
+    \caption{Graph H-Brücke}
+    \label{fig:Graph H-Bridge}
+\end{figure}
