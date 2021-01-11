@@ -1,0 +1,72 @@
+% !TEX root = ./main.tex
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\graphicspath{ {./img/} }
+\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{float}
+\usepackage{listings}
+
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\lstset{literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+}
+
+\newcommand{\nr}{1}
+
+
+\title{Aktorik Sensorik \\ Labor 2}
+\author{Anton Kress (S872899), Jan Abel (S876662)}
+\date{October 2020}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+\tableofcontents 
+\include{laTex/as_labor04_01_einleitung}
+%\include{laTex/as_labor04_04_grundlagen}
+\include{laTex/as_labor04_03_versuch}
+\include{laTex/as_labor04_04_zusammenfassung}
+\include{laTex/as_labor04_05_anhang}
+
+\end{document}

@@ -1,0 +1,92 @@
+% !TEX root = ./main.tex
+
+\documentclass[a4paper, 12pt, halfparskip]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\graphicspath{ {./img/} }
+\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{float}
+\usepackage{listings}
+\usepackage[left=2.7cm, right=2.7cm, top=2.7cm, bottom=2.7cm]{geometry}
+
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\setlength{\parindent}{0pt}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\lstset{literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+}
+
+\newcommand{\nr}{1}
+
+
+\title{Aktorik Sensorik \\ Labor Protokolle}
+\author{Anton Kress (S872899), Jan Abel (S876662)}
+\date{Dezember 2020}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+\tableofcontents 
+% \include{Termin1/main}
+\include{laTex/as_labor01_01_einleitung}
+\include{laTex/as_labor01_02_grundlagen}
+\include{laTex/as_labor01_03_versuch}
+%\include{laTex/as_labor01_04_zusammenfassung}
+\include{laTex/as_labor01_05_anhang}
+
+% \include{Termin2/main}
+\include{laTex/as_labor02_01_einleitung}
+%\include{laTex/as_labor02_02_grundlagen}
+\include{laTex/as_labor02_03_versuch}
+\include{laTex/as_labor02_04_zusammenfassung}
+\include{laTex/as_labor02_05_anhang}
+
+% \include{Termin3/main}
+\include{laTex/as_labor03_01_einleitung}
+\include{laTex/as_labor03_02_grundlagen}
+\include{laTex/as_labor03_03_versuch}
+\include{laTex/as_labor03_04_zusammenfassung}
+\include{laTex/as_labor03_05_anhang}
+
+% \include{Termin4/main}
+
+\end{document}

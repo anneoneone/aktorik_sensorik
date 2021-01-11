@@ -1,0 +1,21 @@
+\subsection{Grundlagen und Theorie}
+
+\subsubsection{Methode der kleinsten Quadrate}
+Die Methode der kleinsten Quadrate ist ein mathematisches Verfahren, bei dem eine lineare Regression
+auf der Basis einer Wolke aus Datenpunkten berechnet werden soll. Es soll eine Kurve gefunden werden,
+die möglichst nah an den Punkten verläuft. Dazu bestimmt man die Parameter dieser Kurve numerisch, indem die Summe 
+der quadratischen Abweichungen der Kurve von den beobachteten Punkten minimiert wird.
+
+Zur Umsetzung der Methode der kleinsten Quadrate in Matlab werden die Funktionen polyfit() und polyval() verwendet. 
+polyfit() erhält beim Aufruf die Werte der Punktwolke sowie den Grad des Polynoms und gibt die entsprechenden Koeffizienten
+zurück. polyval() ermittelt aus den Koeffizienten und den x-Werten die tatsächlichen Werte, mit welchen die Kurve geplottet 
+werden kann. 
+
+\subsubsection{Inkrementalgeber}
+Ein Inkrementalgeber ist ein Messinstrument zur Ermittlung von Lage- oder Winkeländerung (bei rotierenden Objekten). 
+Als verschiedene Arten wird zwischen der photoelektrischen Abtastung (entweder als abbildendes oder interferentielles
+Messprinzip), der magnetischen Abtastung und per Schleifkontakt unterschieden. Dabei werden zwei um 90 Grad verschobene
+Signale erzeugt, über die sich Drehgeschwindigkeit, -richtung und -winkel bestimmen lassen.
+Im Beispielt der photoelektrischen Abtastung wird eine Drehscheibe verwendet, die mit mehreren Schlitzen unterteilt ist und 
+zwischen einer Leuchtdiode und zwei leicht versetzten Photodetektoren angebracht ist. Wenn sich die Scheibe dreht, zählen
+die Photodetektoren die Impulse, welche von Leuchtdiode und Lichtgitter der Drehscheibe entstehen.  

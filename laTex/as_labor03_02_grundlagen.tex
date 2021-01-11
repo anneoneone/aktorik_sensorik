@@ -1,0 +1,14 @@
+\subsection{Grundlagen und Theorie}
+
+Das Blocksschaltbild, welches in Simulink umzusetzten ist, resultiert aus
+den beiden folgenden DGL.
+
+\begin{equation} \label{eq211}
+    \begin{split}
+        \dot{i(t)}&=\frac{1}{L} \left[ u(t) - (R + R_s) \cdot i(t) - ke \cdot \omega(t) \right]\\
+        \dot{\omega(t)}&=\frac{1}{J} \left[km \cdot i(t) -C_r \omega(t) \right]
+    \end{split}
+\end{equation}
+
+Die erste Gleichung ergibt sich aus der Maschengleichung des elektrischen Teils.
+Der zweite Teil der DGL ist auf die Summation der Drehmomente zurückzuführen.

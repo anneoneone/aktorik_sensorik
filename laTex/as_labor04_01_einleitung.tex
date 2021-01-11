@@ -1,0 +1,38 @@
+\section{Labor 4}
+
+\subsection{Einleitung und Ziel}
+
+Im 4. Labor im Modul Aktorik und Sensorik soll ... bestimmt werden.
+
+
+Was müssen Sie um das bestehende Motormodell hinzufügen, um einen Strom einprägen zu können?
+H-Brücke
+
+2.1
+T_LH und T_RL
+
+2.2 
+Durch die Drehung des Motors wird eine Spannung Induziert. Dadurch fließt ein Strom durch die 
+sogenannten Parasitärdioden T_RH und T_LL. 
+
+2.3
+Der Strom lässt sich über R_shunt messen, welcher passenderweise mit 1 OHM gewählt ist. So ist
+die Spannung, die an R_shunt abfällt gleich des Stromes.
+
+2.4
+Es gibt vier verschiedene Zustände. Wenn der Motor im Uhrzeigersinn betrieben werden soll, können
+die entsprechenden Transistoren geschaltet sein oder nicht geschaltet sein. Soll der Motor gegen
+den Uhrzeigersinn betrieben werden, kann das andere Transistorenpaar geschaltet sein oder nicht.
+
+2.5
+Eingänge: I_IST, I_Soll, U_H-Brücke
+Ausgänge: U_Motor
+
+2.6
+1. Fall: AN
+    U_H = U_T_LH + U_Motor + U_T_RL + U_R_shunt
+
+    U_H = R_LH * I_m + (R_shunt * I_m)  
+
+2. Fall: Aus
+    0 = U_H + U_D + U_Motor + U_D + U_shunt
