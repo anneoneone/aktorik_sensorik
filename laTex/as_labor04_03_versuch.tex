@@ -17,3 +17,10 @@ definiert.\\
     \caption{Subsystem Steuerung mit H-Brücke}
     \label{fig:Subsystem H-Bridge}
 \end{figure}
+
+Das Subsystem beinhaltet Relay-Block der hier als Zweipunktregeler genutzt
+wird. Die Beiden Schwellwerte $i_{plus}=10\mathrm{mA}$ und $i_{minus}=-10
+\mathrm{mA}$ wurden im m-File definiert. Dieser gibt einen boolschen Wert
+an den 1. Switch Block der zwischen Transistoren An und Aus hin- und
+herschaltet. Der 2. Switch Block verändert die Drehrichtung des Motors und
+wird geschaltet vom Vorzeichen des einzustellenden Strom $I_{soll}$.
